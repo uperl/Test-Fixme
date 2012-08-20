@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Carp;
-use File::Finder;
+use File::Find;
 use File::Slurp;
 
 use Test::Builder;
@@ -131,16 +131,24 @@ sub list_files {
 'Argument to list_files must be a single path, or a reference to an array of paths';
     }
 
-    my @files = ();
-
     foreach my $path (@paths) {
 
         # Die if we got a bad dir.
         croak "The directory '$path' does not exist" unless -d $path;
-        push @files, File::Finder->type('f')->in($path);
     }
 
-    # Find files using File::Finder.
+    my @files;
+    find(
+        {
+            wanted => sub {
+                push @files, $File::Find::name
+                    if -f $File::Find::name;
+            },
+            no_chdir => 1,
+        },
+        @paths
+    );
+
     @files =
       sort    # sort the files
       grep { m/$filename_match/ }
