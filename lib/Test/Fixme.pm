@@ -263,12 +263,12 @@ files if you want to run several different tests.
 L<Devel::FIXME>
 
 =head1 AUTHOR
- 
-Edmund von der Burg E<lt>evdb@ecclestoad.co.ukE<gt>
+
+Current maintainer: Graham Ollis E<lt>plicease@wdlabs.comE<gt>
 
 Please let me know if you have any comments or suggestions.
 
-L<http://ecclestoad.co.uk/>
+Original author: Edmund von der Burg E<lt>evdb@ecclestoad.co.ukE<gt>
 
 =head1 ACKNOWLEDGMENTS
 
@@ -277,7 +277,9 @@ list of several directories in the 'where' argument. Many thanks.
 
 =head1 LICENSE
 
-Copryight (C) 2008 Edmund von der Burg C<<evdb@ecclestoad.co.uk>>
+Copryight (C) 2008 Edmund von der Burg
+
+Copyright (C) 2012 Graham Ollis
 
 This library is free software . You can redistribute it and/or modify it under
 the same terms as perl itself.
