@@ -37,7 +37,8 @@
             "ExtUtils::MakeMaker" : "0",
             "File::Find" : "0",
             "Test::Builder" : "0",
-            "Test::More" : "0"
+            "Test::More" : "0",
+            "perl" : "5.006000"
          }
       }
    },
