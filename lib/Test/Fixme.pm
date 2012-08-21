@@ -140,6 +140,10 @@ sub list_files {
     my @files;
     find(
         {
+            preprocess => sub {
+                # no GIT, Subversion or CVS directory contents
+                grep !/^(.git|.svn|CVS)$/, @_,
+            },
             wanted => sub {
                 push @files, $File::Find::name
                     if -f $File::Find::name;
@@ -153,8 +157,6 @@ sub list_files {
       sort    # sort the files
       grep { m/$filename_match/ }
       grep { !-l $_ }               # no symbolic links
-      grep { !m{.svn} }             # no Subversion directory contents
-      grep { !m{CVS/} }             # no CVS directory contents
       @files;
 
     return @files;
