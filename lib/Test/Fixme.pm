@@ -5,6 +5,7 @@ use warnings;
 
 use Carp;
 use File::Find;
+use ExtUtils::Manifest qw( maniread );
 
 use Test::Builder;
 require Exporter;
@@ -30,7 +31,12 @@ sub run_tests {
     $Test->skip_all("All tests skipped.") if $args{skip_all};
 
     # Get files to work with and set the plan.
-    my @files = list_files( $args{where}, $args{filename_match} );
+    my @files;
+    if(defined $args{manifest}) {
+        @files = keys %{ maniread( $args{manifest} ) };
+    } else {
+        @files = list_files( $args{where}, $args{filename_match} );
+    }
     $Test->plan( tests => scalar @files );
 
     # Check ech file in turn.
@@ -241,6 +247,11 @@ expression.  For example:
     match => qr/\.(:pm|pl)$/,
 
 would only match .pm and .pl files under your specified directory.
+
+=item manifest
+
+Specifies the name of your MANIFEST file which will be used as the list
+of files to test instead of I<where> or I<filename_match>.
 
 =back
 
