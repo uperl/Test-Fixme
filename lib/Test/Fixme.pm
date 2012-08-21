@@ -278,7 +278,7 @@ L<Devel::FIXME>
 
 =head1 AUTHOR
 
-Current maintainer: Graham Ollis E<lt>plicease@wdlabs.comE<gt>
+Current maintainer: Graham Ollis E<lt>plicease@cpan.orgE<gt>
 
 Please let me know if you have any comments or suggestions.
 

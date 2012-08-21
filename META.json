@@ -1,7 +1,7 @@
 {
    "abstract" : "check code for FIXMEs.",
    "author" : [
-      "Graham Ollis <plicease@wdlabs.com>",
+      "Graham Ollis <plicease@cpan.org>",
       "Edmund von der Burg <evdb@ecclestoad.co.uk>"
    ],
    "dynamic_config" : 1,
