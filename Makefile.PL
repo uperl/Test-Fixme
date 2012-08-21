@@ -12,7 +12,6 @@ WriteMakefile(
         'Carp'                => 0,
         'ExtUtils::MakeMaker' => 0,
         'File::Find'          => 0,
-        'File::Slurp'         => 0,
         'Test::Builder'       => 0,
         'Test::More'          => 0,
     },

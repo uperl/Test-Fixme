@@ -1,5 +1,8 @@
 Changes
 
+0.06
+     - Remove dep on File::Slurp
+
 0.05
      - Use File::Find instead of File::Finder
      - skip .git directory, like .svn and CSV

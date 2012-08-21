@@ -5,7 +5,6 @@ use warnings;
 
 use Carp;
 use File::Find;
-use File::Slurp;
 
 use Test::Builder;
 require Exporter;
@@ -169,7 +168,9 @@ sub load_file {
     return undef unless -f $filename;
 
     # Slurp the file.
-    my $content = read_file($filename);
+    open(my $fh, '<', $filename) || die "error reading $filename $!";
+    my $content = do { local $/; <$fh> };
+    close $fh;
     return $content;
 }
 
