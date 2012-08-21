@@ -14,7 +14,7 @@ use vars qw( @ISA @EXPORT );
 @EXPORT = qw( run_tests );
 
 our $VERSION;
-$VERSION = '0.04';
+$VERSION = '0.05';
 
 my $Test = Test::Builder->new;
 
