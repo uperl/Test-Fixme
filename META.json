@@ -43,5 +43,14 @@
       }
    },
    "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/plicease/Test-Fixme/issues"
+      },
+      "homepage" : "http://search.cpan.org/dist/Test-Fixme/",
+      "repository" : {
+         "url" : "git://github.com/plicease/Test-Fixme.git"
+      }
+   },
    "version" : "0.05"
 }

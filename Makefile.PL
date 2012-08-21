@@ -18,4 +18,11 @@ WriteMakefile(
         'Test::Builder'       => 0,
         'Test::More'          => 0,
     },
+    META_MERGE => {
+        resources => {
+            bugtracker => 'https://github.com/plicease/Test-Fixme/issues',
+            homepage   => 'http://search.cpan.org/dist/Test-Fixme/',
+            repository => 'git://github.com/plicease/Test-Fixme.git',
+        },
+    },
 );
