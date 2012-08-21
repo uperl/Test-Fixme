@@ -8,6 +8,7 @@ WriteMakefile(
     'AUTHOR'        => [ 'Graham Ollis <plicease@wdlabs.com>', 'Edmund von der Burg <evdb@ecclestoad.co.uk>' ],
     'NAME'          => 'Test::Fixme',
     'VERSION_FROM'  => 'lib/Test/Fixme.pm',
+    'LICENSE'       => 'perl',
     'PREREQ_PM'     => {
         'Carp'                => 0,
         'ExtUtils::MakeMaker' => 0,
