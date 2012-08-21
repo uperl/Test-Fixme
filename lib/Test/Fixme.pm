@@ -253,6 +253,8 @@ would only match .pm and .pl files under your specified directory.
 Specifies the name of your MANIFEST file which will be used as the list
 of files to test instead of I<where> or I<filename_match>.
 
+    manifest => 'MANIFEST',
+
 =back
 
 =head1 HINTS

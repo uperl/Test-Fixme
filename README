@@ -57,6 +57,8 @@ DESCRIPTION
         Specifies the name of your MANIFEST file which will be used as the
         list of files to test instead of *where* or *filename_match*.
 
+            manifest => 'MANIFEST',
+
 HINTS
     If you want to match something other than 'FIXME' then you may find that
     the test file itself is being caught. Try doing this:
