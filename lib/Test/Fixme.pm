@@ -14,7 +14,7 @@ use vars qw( @ISA @EXPORT );
 @EXPORT = qw( run_tests );
 
 our $VERSION;
-$VERSION = '0.06';
+$VERSION = '0.07';
 
 my $Test = Test::Builder->new;
 
@@ -139,7 +139,7 @@ sub list_files {
     foreach my $path (@paths) {
 
         # Die if we got a bad dir.
-        croak "The directory '$path' does not exist" unless -d $path;
+        croak "'$path' does not exist" unless -e $path;
     }
 
     my @files;
