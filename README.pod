@@ -1,9 +1,15 @@
+=pod
+
 =head1 NAME
- 
+
 Test::Fixme - check code for FIXMEs.
- 
+
+=head1 VERSION
+
+version 0.09
+
 =head1 SYNOPSIS
- 
+
  # In a test script like 't/test-fixme.t'
  use Test::Fixme;
  run_tests();
@@ -16,7 +22,7 @@ Test::Fixme - check code for FIXMEs.
  );
 
 =head1 DESCRIPTION
- 
+
 When coding it is common to come up against problems that need to be
 addressed but that are not a big deal at the moment. What generally
 happens is that the coder adds comments like:
@@ -90,25 +96,25 @@ files if you want to run several different tests.
 
 L<Devel::FIXME>
 
-=head1 AUTHOR
-
-Current maintainer: Graham Ollis E<lt>plicease@cpan.orgE<gt>
-
-Please let me know if you have any comments or suggestions.
-
-Original author: Edmund von der Burg E<lt>evdb@ecclestoad.co.ukE<gt>
-
 =head1 ACKNOWLEDGMENTS
 
 Dave O'Neill added support for 'filename_match' and also being able to pass a
 list of several directories in the 'where' argument. Many thanks.
 
-=head1 LICENSE
+=head1 AUTHOR
 
-Copryight (C) 2008 Edmund von der Burg
+original author: Edmund von der Burg
 
-Copyright (C) 2012 Graham Ollis
+current maintainer: Graham Ollis <plicease@cpan.org>
 
-This library is free software . You can redistribute it and/or modify it under
-the same terms as perl itself.
+contributors:
+
+Dave O'Neill
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2013 by Edmund von der Burg <evdb@ecclestoad.co.uk>, Graham Ollis <plicease@cpan.org>.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 

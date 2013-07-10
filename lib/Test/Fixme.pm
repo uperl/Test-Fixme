@@ -13,6 +13,7 @@ use vars qw( @ISA @EXPORT );
 @ISA    = qw(Exporter);
 @EXPORT = qw( run_tests );
 
+# ABSTRACT: check code for FIXMEs.
 # VERSION
 
 my $Test = Test::Builder->new;
@@ -183,10 +184,6 @@ sub load_file {
 
 __END__
 
-=head1 NAME
- 
-Test::Fixme - check code for FIXMEs.
- 
 =head1 SYNOPSIS
  
  # In a test script like 't/test-fixme.t'
@@ -275,27 +272,10 @@ files if you want to run several different tests.
 
 L<Devel::FIXME>
 
-=head1 AUTHOR
-
-Current maintainer: Graham Ollis E<lt>plicease@cpan.orgE<gt>
-
-Please let me know if you have any comments or suggestions.
-
-Original author: Edmund von der Burg E<lt>evdb@ecclestoad.co.ukE<gt>
-
 =head1 ACKNOWLEDGMENTS
 
 Dave O'Neill added support for 'filename_match' and also being able to pass a
 list of several directories in the 'where' argument. Many thanks.
-
-=head1 LICENSE
-
-Copryight (C) 2008 Edmund von der Burg
-
-Copyright (C) 2012 Graham Ollis
-
-This library is free software . You can redistribute it and/or modify it under
-the same terms as perl itself.
 
 =cut
 
