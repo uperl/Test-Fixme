@@ -210,7 +210,9 @@ happens is that the coder adds comments like:
 L<Test::Fixme> allows you to add a test file that ensures that none of
 these get forgotten in the module.
 
-=head2 Arguments
+=head1 METHODS
+
+=head2 run_tests
 
 By default run_tests will search for 'FIXME' in all the files it can
 find in the project. You can change these defaults by using 'where' or
@@ -225,7 +227,7 @@ find in the project. You can change these defaults by using 'where' or
 =item where
 
 Specifies where to search for files.  This can be a scalar containing a
-single directory name, or it can be a listref containing multiple
+single directory name, or it can be a list reference containing multiple
 directory names.
 
 =item match
