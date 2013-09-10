@@ -1,5 +1,6 @@
 package Test::Fixme;
 
+require 5.6.2;
 use strict;
 use warnings;
 
@@ -9,9 +10,8 @@ use ExtUtils::Manifest qw( maniread );
 
 use Test::Builder;
 require Exporter;
-use vars qw( @ISA @EXPORT );
-@ISA    = qw(Exporter);
-@EXPORT = qw( run_tests );
+our @ISA    = qw( Exporter  );
+our @EXPORT = qw( run_tests );
 
 # ABSTRACT: check code for FIXMEs.
 # VERSION
