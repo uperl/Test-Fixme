@@ -2,17 +2,12 @@
 
 check code for FIXMEs.
 
-# VERSION
-
-version 0.10
-
 # SYNOPSIS
 
     # In a test script like 't/test-fixme.t'
     use Test::Fixme;
     run_tests();
     
-
     # You can also tailor the behaviour.
     use Test::Fixme;
     run_tests( where    => 'lib',      # where to find files to check

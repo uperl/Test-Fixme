@@ -1,6 +1,7 @@
 Revision history for Test-Fixme
 
 {{$NEXT}}
+  - make perl 5.6.2 a minimum requirement
 
 0.10      2013-08-11T07:52:08-0400
           - Documentation tweaks
