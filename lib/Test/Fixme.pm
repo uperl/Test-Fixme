@@ -13,7 +13,7 @@ require Exporter;
 our @ISA    = qw( Exporter  );
 our @EXPORT = qw( run_tests );
 
-# ABSTRACT: check code for FIXMEs.
+# ABSTRACT: Check code for FIXMEs.
 # VERSION
 
 my $Test = Test::Builder->new;

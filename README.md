@@ -1,6 +1,6 @@
 # Test::Fixme [![Build Status](https://secure.travis-ci.org/plicease/Test-Fixme.png)](http://travis-ci.org/plicease/Test-Fixme)
 
-check code for FIXMEs.
+Check code for FIXMEs.
 
 # SYNOPSIS
 
@@ -25,7 +25,7 @@ happens is that the coder adds comments like:
 
     # FIXME - add checking of user priviledges here.
 
-[Test::Fixme](http://search.cpan.org/perldoc?Test::Fixme) allows you to add a test file that ensures that none of
+[Test::Fixme](https://metacpan.org/pod/Test::Fixme) allows you to add a test file that ensures that none of
 these get forgotten in the module.
 
 # METHODS
@@ -86,7 +86,7 @@ files if you want to run several different tests.
 
 # SEE ALSO
 
-[Devel::FIXME](http://search.cpan.org/perldoc?Devel::FIXME)
+[Devel::FIXME](https://metacpan.org/pod/Devel::FIXME)
 
 # ACKNOWLEDGMENTS
 
@@ -105,7 +105,7 @@ Dave O'Neill
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Edmund von der Burg <evdb@ecclestoad.co.uk>, Graham Ollis <plicease@cpan.org>.
+This software is copyright (c) 2014 by Edmund von der Burg <evdb@ecclestoad.co.uk>, Graham Ollis <plicease@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
