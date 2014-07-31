@@ -23,7 +23,7 @@ happens is that the coder adds comments like:
 
     # FIXME - what about windows that are bigger than the screen?
 
-    # FIXME - add checking of user priviledges here.
+    # FIXME - add checking of user privileges here.
 
 [Test::Fixme](https://metacpan.org/pod/Test::Fixme) allows you to add a test file that ensures that none of
 these get forgotten in the module.
