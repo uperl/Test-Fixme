@@ -103,6 +103,8 @@ contributors:
 
 Dave O'Neill
 
+gregor herrmann <gregoa@debian.org>
+
 # COPYRIGHT AND LICENSE
 
 This software is copyright (c) 2014 by Edmund von der Burg <evdb@ecclestoad.co.uk>, Graham Ollis <plicease@cpan.org>.
