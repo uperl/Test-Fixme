@@ -69,6 +69,12 @@ find in the project. You can change these defaults by using 'where' or
 
         manifest => 'MANIFEST',
 
+- warn
+
+    Do not fail when a FIXME or other pattern is matched.  Tests that would
+    have been failures will still issue a diagnostic that will be viewed
+    when you run `prove` without `-v`, `make test` or `./Build test`.
+
 # HINTS
 
 If you want to match something other than 'FIXME' then you may find
