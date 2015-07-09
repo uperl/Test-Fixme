@@ -9,9 +9,10 @@ pod_spelling_system:
     - FIXMEs
     - gregor
     - herrmann
+    - IDEs
 
 pod_coverage:
   # format is "Class#method" or "Class", regex allowed
   # for either Class or method.
   private:
-    - Test::Fixme#(format_file_results|list_files|load_file|scan_file)
+    - Test::Fixme#(format_file_results_.*|list_files|load_file|scan_file)

@@ -75,6 +75,59 @@ find in the project. You can change these defaults by using 'where' or
     have been failures will still issue a diagnostic that will be viewed
     when you run `prove` without `-v`, `make test` or `./Build test`.
 
+- format
+
+    Specifies how the found bad patterns will be displayed.
+
+    - original
+
+        The original and currently default format looks something like this:
+
+        \# File: './lib/Test/Fixme.pm'
+        \#     16      # ABSTRACT: Check code for FIXMEs.
+        \#     25          $args{match} = 'FIXME' unless defined $args{match} && length $args{match};
+        \#     28          $args{format} ||= $ENV{TEST\_FIXME\_FORMAT};
+        \#     228      # FIXME - what about windows that are bigger than the screen?
+        \#     230      # FIXME - add checking of user privileges here.
+        \#     239     By default run\_tests will search for 'FIXME' in all the files it can
+        \#     280     Do not fail when a FIXME or other pattern is matched.  Tests that would
+        \#     288     If you want to match something other than 'FIXME' then you may find
+        \#     296      run\_tests( skip\_all => $ENV{SKIP\_TEST\_FIXME} );
+        \#     303     [Devel::FIXME](https://metacpan.org/pod/Devel::FIXME)
+
+        With the line numbers on the left and the offending text on the right.
+
+    - perl
+
+        The "perl" format is that used by Perl itself to report warnings and errors.
+
+        \# Pattern found at file ./lib/Test/Fixme.pm at 16:
+        \#  # ABSTRACT: Check code for FIXMEs.
+        \# Pattern found at file ./lib/Test/Fixme.pm at 25:
+        \#      $args{match} = 'FIXME' unless defined $args{match} && length $args{match};
+        \# Pattern found at file ./lib/Test/Fixme.pm at 28:
+        \#      $args{format} ||= $ENV{TEST\_FIXME\_FORMAT};
+        \# Pattern found at file ./lib/Test/Fixme.pm at 228:
+        \#   # FIXME - what about windows that are bigger than the screen?
+        \# Pattern found at file ./lib/Test/Fixme.pm at 230:
+        \#   # FIXME - add checking of user privileges here.
+        \# Pattern found at file ./lib/Test/Fixme.pm at 239:
+        \#  By default run\_tests will search for 'FIXME' in all the files it can
+        \# Pattern found at file ./lib/Test/Fixme.pm at 280:
+        \#  Do not fail when a FIXME or other pattern is matched.  Tests that would
+        \# Pattern found at file ./lib/Test/Fixme.pm at 288:
+        \#  If you want to match something other than 'FIXME' then you may find
+        \# Pattern found at file ./lib/Test/Fixme.pm at 296:
+        \#   run\_tests( skip\_all => $ENV{SKIP\_TEST\_FIXME} );
+        \# Pattern found at file ./lib/Test/Fixme.pm at 303:
+        \#  [Devel::FIXME](https://metacpan.org/pod/Devel::FIXME)
+
+        For files that contain many offending patterns it may be a bit harder to read for
+        humans, but easier to parse for IDEs.
+
+    You may also use the `TEST_FIXME_FORMAT` environment variable to override either
+    the default or the value specified in the test file.
+
 # HINTS
 
 If you want to match something other than 'FIXME' then you may find
@@ -101,11 +154,11 @@ list of several directories in the 'where' argument. Many thanks.
 
 # AUTHOR
 
-original author: Edmund von der Burg
+Original author: Edmund von der Burg
 
-current maintainer: Graham Ollis <plicease@cpan.org>
+Current maintainer: Graham Ollis <plicease@cpan.org>
 
-contributors:
+Contributors:
 
 Dave O'Neill
 
@@ -113,7 +166,7 @@ gregor herrmann <gregoa@debian.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Edmund von der Burg <evdb@ecclestoad.co.uk>, Graham Ollis <plicease@cpan.org>.
+This software is copyright (c) 2015 by Edmund von der Burg <evdb@ecclestoad.co.uk>, Graham Ollis <plicease@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
