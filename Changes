@@ -1,6 +1,7 @@
 Revision history for Test-Fixme
 
 {{$NEXT}}
+  - add format option and TEST_FIXME_FORMAT environment variable
 
 0.14      2014-10-08 07:59:57 -0400
   - fixed missing merge from 0.12

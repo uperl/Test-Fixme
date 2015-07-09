@@ -19,4 +19,4 @@ File: 't/dirs/normal/two.pl'
     10      # TEST - test 2 (line 10).
 STOP
 
-is Test::Fixme::format_file_results($results), $expected, "check formatting";
+is Test::Fixme::format_file_results_original($results), $expected, "check formatting";

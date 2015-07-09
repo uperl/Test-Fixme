@@ -25,6 +25,9 @@ sub run_tests {
     $args{match} = 'FIXME' unless defined $args{match} && length $args{match};
     $args{where} = '.'     unless defined $args{where} && length $args{where};
     $args{warn}  = 0       unless defined $args{warn}  && length $args{warn};
+    $args{format} = $ENV{TEST_FIXME_FORMAT} if defined $ENV{TEST_FIXME_FORMAT};
+    $args{format} = 'original'
+      unless defined $args{format} && $args{format} =~ /^(original|perl)$/;
     $args{filename_match} = qr/./
       unless defined $args{filename_match} && length $args{filename_match};
     my $first = 1;
@@ -48,7 +51,10 @@ sub run_tests {
         $Test->ok($ok || $args{warn}, "'$file'");
         next if $ok;
         $Test->diag('') if $first++;
-        $Test->diag(format_file_results($results));
+        $Test->diag(do {
+          no strict 'refs';
+          &{"format_file_results_$args{format}"}($results)
+        });
     }
 }
 
@@ -81,7 +87,7 @@ sub scan_file {
     return \@results;
 }
 
-sub format_file_results {
+sub format_file_results_original {
     my $results = shift;
     return undef unless defined $results;
 
@@ -97,6 +103,24 @@ sub format_file_results {
         $txt .= ' ' x ( 8 - length $line );
         $txt .= $$result{text} . "\n";
         $out .= $txt;
+    }
+
+    return $out;
+}
+
+sub format_file_results_perl {
+    my $results = shift;
+    return undef unless defined $results;
+
+    my $out = '';
+
+    # format the results.
+    foreach my $result (@$results) {
+        my $file = ${$results}[0]->{file};
+        my $line = $$result{line};
+        my $text = $$result{text};
+        
+        $out .= "Pattern found at file $file at $line:\n $text\n";
     }
 
     return $out;
@@ -256,6 +280,63 @@ of files to test instead of I<where> or I<filename_match>.
 Do not fail when a FIXME or other pattern is matched.  Tests that would
 have been failures will still issue a diagnostic that will be viewed
 when you run C<prove> without C<-v>, C<make test> or C<./Build test>.
+
+=item format
+
+Specifies how the found bad patterns will be displayed.
+
+=over 4
+
+=item original
+
+The original and currently default format looks something like this:
+
+# File: './lib/Test/Fixme.pm'
+#     16      # ABSTRACT: Check code for FIXMEs.
+#     25          $args{match} = 'FIXME' unless defined $args{match} && length $args{match};
+#     28          $args{format} ||= $ENV{TEST_FIXME_FORMAT};
+#     228      # FIXME - what about windows that are bigger than the screen?
+#     230      # FIXME - add checking of user privileges here.
+#     239     By default run_tests will search for 'FIXME' in all the files it can
+#     280     Do not fail when a FIXME or other pattern is matched.  Tests that would
+#     288     If you want to match something other than 'FIXME' then you may find
+#     296      run_tests( skip_all => $ENV{SKIP_TEST_FIXME} );
+#     303     L<Devel::FIXME>
+
+With the line numbers on the left and the offending text on the right.
+
+=item perl
+
+The "perl" format is that used by Perl itself to report warnings and errors.
+
+# Pattern found at file ./lib/Test/Fixme.pm at 16:
+#  # ABSTRACT: Check code for FIXMEs.
+# Pattern found at file ./lib/Test/Fixme.pm at 25:
+#      $args{match} = 'FIXME' unless defined $args{match} && length $args{match};
+# Pattern found at file ./lib/Test/Fixme.pm at 28:
+#      $args{format} ||= $ENV{TEST_FIXME_FORMAT};
+# Pattern found at file ./lib/Test/Fixme.pm at 228:
+#   # FIXME - what about windows that are bigger than the screen?
+# Pattern found at file ./lib/Test/Fixme.pm at 230:
+#   # FIXME - add checking of user privileges here.
+# Pattern found at file ./lib/Test/Fixme.pm at 239:
+#  By default run_tests will search for 'FIXME' in all the files it can
+# Pattern found at file ./lib/Test/Fixme.pm at 280:
+#  Do not fail when a FIXME or other pattern is matched.  Tests that would
+# Pattern found at file ./lib/Test/Fixme.pm at 288:
+#  If you want to match something other than 'FIXME' then you may find
+# Pattern found at file ./lib/Test/Fixme.pm at 296:
+#   run_tests( skip_all => $ENV{SKIP_TEST_FIXME} );
+# Pattern found at file ./lib/Test/Fixme.pm at 303:
+#  L<Devel::FIXME>
+
+For files that contain many offending patterns it may be a bit harder to read for
+humans, but easier to parse for IDEs.
+
+=back
+
+You may also use the C<TEST_FIXME_FORMAT> environment variable to override either
+the default or the value specified in the test file.
 
 =back
 
