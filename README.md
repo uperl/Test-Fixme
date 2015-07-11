@@ -83,17 +83,17 @@ find in the project. You can change these defaults by using 'where' or
 
         The original and currently default format looks something like this:
 
-        \# File: './lib/Test/Fixme.pm'
-        \#     16      # ABSTRACT: Check code for FIXMEs.
-        \#     25          $args{match} = 'FIXME' unless defined $args{match} && length $args{match};
-        \#     28          $args{format} ||= $ENV{TEST\_FIXME\_FORMAT};
-        \#     228      # FIXME - what about windows that are bigger than the screen?
-        \#     230      # FIXME - add checking of user privileges here.
-        \#     239     By default run\_tests will search for 'FIXME' in all the files it can
-        \#     280     Do not fail when a FIXME or other pattern is matched.  Tests that would
-        \#     288     If you want to match something other than 'FIXME' then you may find
-        \#     296      run\_tests( skip\_all => $ENV{SKIP\_TEST\_FIXME} );
-        \#     303     [Devel::FIXME](https://metacpan.org/pod/Devel::FIXME)
+            # File: './lib/Test/Fixme.pm'
+            #     16      # ABSTRACT: Check code for FIXMEs.
+            #     25          $args{match} = 'FIXME' unless defined $args{match} && length $args{match};
+            #     28          $args{format} ||= $ENV{TEST_FIXME_FORMAT};
+            #     228      # FIXME - what about windows that are bigger than the screen?
+            #     230      # FIXME - add checking of user privileges here.
+            #     239     By default run_tests will search for 'FIXME' in all the files it can
+            #     280     Do not fail when a FIXME or other pattern is matched.  Tests that would
+            #     288     If you want to match something other than 'FIXME' then you may find
+            #     296      run_tests( skip_all => $ENV{SKIP_TEST_FIXME} );
+            #     303     L<Devel::FIXME>
 
         With the line numbers on the left and the offending text on the right.
 
@@ -101,26 +101,26 @@ find in the project. You can change these defaults by using 'where' or
 
         The "perl" format is that used by Perl itself to report warnings and errors.
 
-        \# Pattern found at file ./lib/Test/Fixme.pm at 16:
-        \#  # ABSTRACT: Check code for FIXMEs.
-        \# Pattern found at file ./lib/Test/Fixme.pm at 25:
-        \#      $args{match} = 'FIXME' unless defined $args{match} && length $args{match};
-        \# Pattern found at file ./lib/Test/Fixme.pm at 28:
-        \#      $args{format} ||= $ENV{TEST\_FIXME\_FORMAT};
-        \# Pattern found at file ./lib/Test/Fixme.pm at 228:
-        \#   # FIXME - what about windows that are bigger than the screen?
-        \# Pattern found at file ./lib/Test/Fixme.pm at 230:
-        \#   # FIXME - add checking of user privileges here.
-        \# Pattern found at file ./lib/Test/Fixme.pm at 239:
-        \#  By default run\_tests will search for 'FIXME' in all the files it can
-        \# Pattern found at file ./lib/Test/Fixme.pm at 280:
-        \#  Do not fail when a FIXME or other pattern is matched.  Tests that would
-        \# Pattern found at file ./lib/Test/Fixme.pm at 288:
-        \#  If you want to match something other than 'FIXME' then you may find
-        \# Pattern found at file ./lib/Test/Fixme.pm at 296:
-        \#   run\_tests( skip\_all => $ENV{SKIP\_TEST\_FIXME} );
-        \# Pattern found at file ./lib/Test/Fixme.pm at 303:
-        \#  [Devel::FIXME](https://metacpan.org/pod/Devel::FIXME)
+            # Pattern found at file ./lib/Test/Fixme.pm at 16:
+            #  # ABSTRACT: Check code for FIXMEs.
+            # Pattern found at file ./lib/Test/Fixme.pm at 25:
+            #      $args{match} = 'FIXME' unless defined $args{match} && length $args{match};
+            # Pattern found at file ./lib/Test/Fixme.pm at 28:
+            #      $args{format} ||= $ENV{TEST_FIXME_FORMAT};
+            # Pattern found at file ./lib/Test/Fixme.pm at 228:
+            #   # FIXME - what about windows that are bigger than the screen?
+            # Pattern found at file ./lib/Test/Fixme.pm at 230:
+            #   # FIXME - add checking of user privileges here.
+            # Pattern found at file ./lib/Test/Fixme.pm at 239:
+            #  By default run_tests will search for 'FIXME' in all the files it can
+            # Pattern found at file ./lib/Test/Fixme.pm at 280:
+            #  Do not fail when a FIXME or other pattern is matched.  Tests that would
+            # Pattern found at file ./lib/Test/Fixme.pm at 288:
+            #  If you want to match something other than 'FIXME' then you may find
+            # Pattern found at file ./lib/Test/Fixme.pm at 296:
+            #   run_tests( skip_all => $ENV{SKIP_TEST_FIXME} );
+            # Pattern found at file ./lib/Test/Fixme.pm at 303:
+            #  L<Devel::FIXME>
 
         For files that contain many offending patterns it may be a bit harder to read for
         humans, but easier to parse for IDEs.
