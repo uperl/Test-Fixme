@@ -283,7 +283,7 @@ when you run C<prove> without C<-v>, C<make test> or C<./Build test>.
 
 =item format
 
-Specifies how the found bad patterns will be displayed.
+Specifies format to be used for display of pattern matches.
 
 =over 4
 
