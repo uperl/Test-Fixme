@@ -77,7 +77,7 @@ find in the project. You can change these defaults by using 'where' or
 
 - format
 
-    Specifies how the found bad patterns will be displayed.
+    Specifies format to be used for display of pattern matches.
 
     - original
 
@@ -101,25 +101,25 @@ find in the project. You can change these defaults by using 'where' or
 
         The "perl" format is that used by Perl itself to report warnings and errors.
 
-            # Pattern found at file ./lib/Test/Fixme.pm at 16:
+            # Pattern found at ./lib/Test/Fixme.pm at 16:
             #  # ABSTRACT: Check code for FIXMEs.
-            # Pattern found at file ./lib/Test/Fixme.pm at 25:
+            # Pattern found at ./lib/Test/Fixme.pm at 25:
             #      $args{match} = 'FIXME' unless defined $args{match} && length $args{match};
-            # Pattern found at file ./lib/Test/Fixme.pm at 28:
+            # Pattern found at ./lib/Test/Fixme.pm at 28:
             #      $args{format} ||= $ENV{TEST_FIXME_FORMAT};
-            # Pattern found at file ./lib/Test/Fixme.pm at 228:
+            # Pattern found at ./lib/Test/Fixme.pm at 228:
             #   # FIXME - what about windows that are bigger than the screen?
-            # Pattern found at file ./lib/Test/Fixme.pm at 230:
+            # Pattern found at ./lib/Test/Fixme.pm at 230:
             #   # FIXME - add checking of user privileges here.
-            # Pattern found at file ./lib/Test/Fixme.pm at 239:
+            # Pattern found at ./lib/Test/Fixme.pm at 239:
             #  By default run_tests will search for 'FIXME' in all the files it can
-            # Pattern found at file ./lib/Test/Fixme.pm at 280:
+            # Pattern found at ./lib/Test/Fixme.pm at 280:
             #  Do not fail when a FIXME or other pattern is matched.  Tests that would
-            # Pattern found at file ./lib/Test/Fixme.pm at 288:
+            # Pattern found at ./lib/Test/Fixme.pm at 288:
             #  If you want to match something other than 'FIXME' then you may find
-            # Pattern found at file ./lib/Test/Fixme.pm at 296:
+            # Pattern found at ./lib/Test/Fixme.pm at 296:
             #   run_tests( skip_all => $ENV{SKIP_TEST_FIXME} );
-            # Pattern found at file ./lib/Test/Fixme.pm at 303:
+            # Pattern found at ./lib/Test/Fixme.pm at 303:
             #  L<Devel::FIXME>
 
         For files that contain many offending patterns it may be a bit harder to read for

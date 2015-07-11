@@ -2,6 +2,9 @@ Revision history for Test-Fixme
 
 {{$NEXT}}
 
+0.14_02   2015-07-11 16:42:24 -0400
+  - documentation fixes
+
 0.14_01   2015-07-09 12:43:16 -0400
   - add format option and TEST_FIXME_FORMAT environment variable
 
