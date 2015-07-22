@@ -1,6 +1,6 @@
 package Test::Fixme;
 
-require 5.006002;
+require 5.006;
 use strict;
 use warnings;
 
@@ -354,6 +354,13 @@ You may also wish to suppress the tests - try this:
 
 You can only run run_tests once per file. Please use several test
 files if you want to run several different tests.
+
+=head1 CAVEATS
+
+This module is fully supported back to Perl 5.8.1.  It may work on 5.8.0.  
+It should work on Perl 5.6.x and I may even test on 5.6.2.  I will accept
+patches to maintain compatibility for such older Perls, but you may
+need to fix it on 5.6.x / 5.8.0 and send me a patch.
 
 =head1 SEE ALSO
 
