@@ -60,6 +60,7 @@ qr{^You must specify a single directory, or reference to a list of directories},
 }
 
 SKIP: {    # Check that non files do not get returned.
+    skip( "MSYS2 does not support symlinks", 4 ) if $^O eq 'msys';
     skip( "cannot create symlink", 4 ) unless eval { symlink( "", "" ); 1 };
 
     my $dir         = "t/dirs/types";
