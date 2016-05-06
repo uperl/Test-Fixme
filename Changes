@@ -2,6 +2,9 @@ Revision history for Test-Fixme
 
 {{$NEXT}}
 
+0.16      2016-05-06 07:26:50 -0400
+  - Add support for MSYS2
+
 0.15      2015-07-19 21:33:34 -0400
   - Production release identical to 0.14_03
 
