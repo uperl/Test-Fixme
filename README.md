@@ -173,7 +173,7 @@ gregor herrmann <gregoa@debian.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2016 by Edmund von der Burg <evdb@ecclestoad.co.uk>, Graham Ollis <plicease@cpan.org>.
+This software is copyright (c) 2017 by Edmund von der Burg <evdb@ecclestoad.co.uk>, Graham Ollis <plicease@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
