@@ -1,16 +1,14 @@
 package Test::Fixme;
 
-require 5.006;
+use 5.006;
 use strict;
 use warnings;
-
 use Carp;
 use File::Find;
 use ExtUtils::Manifest qw( maniread );
-
 use Test::Builder;
-require Exporter;
-our @ISA    = qw( Exporter  );
+use base qw( Exporter );
+
 our @EXPORT = qw( run_tests );
 
 # ABSTRACT: Check code for FIXMEs.
@@ -119,7 +117,7 @@ sub format_file_results_perl {
         my $file = ${$results}[0]->{file};
         my $line = $$result{line};
         my $text = $$result{text};
-        
+
         $out .= "Pattern found at $file line $line:\n $text\n";
     }
 
@@ -207,7 +205,7 @@ sub load_file {
 __END__
 
 =head1 SYNOPSIS
- 
+
  # In a test script like 't/test-fixme.t'
  use Test::Fixme;
  run_tests();
@@ -220,13 +218,13 @@ __END__
  );
 
 =head1 DESCRIPTION
- 
+
 When coding it is common to come up against problems that need to be
 addressed but that are not a big deal at the moment. What generally
 happens is that the coder adds comments like:
 
  # FIXME - what about windows that are bigger than the screen?
-
+ 
  # FIXME - add checking of user privileges here.
 
 L<Test::Fixme> allows you to add a test file that ensures that none of
@@ -357,7 +355,7 @@ files if you want to run several different tests.
 
 =head1 CAVEATS
 
-This module is fully supported back to Perl 5.8.1.  It may work on 5.8.0.  
+This module is fully supported back to Perl 5.8.1.  It may work on 5.8.0.
 It should work on Perl 5.6.x and I may even test on 5.6.2.  I will accept
 patches to maintain compatibility for such older Perls, but you may
 need to fix it on 5.6.x / 5.8.0 and send me a patch.

@@ -1,6 +1,5 @@
 use strict;
 use warnings;
-use FindBin ();
 use File::Spec;
 use Test::More tests => 14;
 
@@ -82,7 +81,7 @@ SKIP: {    # Check that non files do not get returned.
 }
 
 {   # Test that you can pass in just a file
-    my @list = eval { Test::Fixme::list_files(File::Spec->catfile($FindBin::Bin, 'dirs', 'normal', 'three.pm')) };
+    my @list = eval { Test::Fixme::list_files(File::Spec->catfile('t', 'dirs', 'normal', 'three.pm')) };
     diag $@ if $@;
     like $list[0], qr{three.pm$}, "can give list_files directories or files";
 }
