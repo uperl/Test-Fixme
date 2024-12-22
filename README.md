@@ -1,4 +1,4 @@
-# Test::Fixme ![linux](https://github.com/uperl/Test-Fixme/workflows/linux/badge.svg) ![macos](https://github.com/uperl/Test-Fixme/workflows/macos/badge.svg) ![windows](https://github.com/uperl/Test-Fixme/workflows/windows/badge.svg) ![cygwin](https://github.com/uperl/Test-Fixme/workflows/cygwin/badge.svg) ![msys2-mingw](https://github.com/uperl/Test-Fixme/workflows/msys2-mingw/badge.svg)
+# Test::Fixme ![linux](https://github.com/uperl/Test-Fixme/workflows/linux/badge.svg) ![macos](https://github.com/uperl/Test-Fixme/workflows/macos/badge.svg) ![windows](https://github.com/uperl/Test-Fixme/workflows/windows/badge.svg) ![msys2-mingw](https://github.com/uperl/Test-Fixme/workflows/msys2-mingw/badge.svg)
 
 Check code for FIXMEs.
 
@@ -193,7 +193,7 @@ gregor herrmann <gregoa@debian.org>
 
 # COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2005-2019 by Edmund von der Burg <evdb@ecclestoad.co.uk>, Graham Ollis <plicease@cpan.org>.
+This software is copyright (c) 2005-2024 by Edmund von der Burg <evdb@ecclestoad.co.uk>, Graham Ollis <plicease@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

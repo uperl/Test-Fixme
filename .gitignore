@@ -11,3 +11,7 @@ cover_db
 .build
 MYMETA.yml
 MYMETA.json
+/Test-Fixme-*
+/.build
+*.old
+*.orig
