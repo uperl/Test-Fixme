@@ -1,4 +1,4 @@
-# Test::Fixme ![linux](https://github.com/uperl/Test-Fixme/workflows/linux/badge.svg) ![macos](https://github.com/uperl/Test-Fixme/workflows/macos/badge.svg) ![windows](https://github.com/uperl/Test-Fixme/workflows/windows/badge.svg) ![msys2-mingw](https://github.com/uperl/Test-Fixme/workflows/msys2-mingw/badge.svg)
+# Test::Fixme ![linux](https://github.com/uperl/Test-Fixme/workflows/linux/badge.svg) ![macos](https://github.com/uperl/Test-Fixme/workflows/macos/badge.svg) ![windows](https://github.com/uperl/Test-Fixme/workflows/windows/badge.svg)
 
 Check code for FIXMEs.
 

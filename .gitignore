@@ -15,3 +15,4 @@ MYMETA.json
 /.build
 *.old
 *.orig
+*.swp
