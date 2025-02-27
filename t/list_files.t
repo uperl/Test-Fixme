@@ -61,6 +61,7 @@ qr{^You must specify a single directory, or reference to a list of directories},
 SKIP: {    # Check that non files do not get returned.
     skip( "MSYS2 does not support symlinks", 4 ) if $^O eq 'msys';
     skip( "cannot create symlink", 4 ) unless eval { symlink( "", "" ); 1 };
+    skip( "symlinks are not typically configured for Windows", 4 ) if $^O eq 'MSWin32';
 
     my $dir         = "t/dirs/types";
     my $target      = "normal.txt";
